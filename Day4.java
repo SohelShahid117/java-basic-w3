@@ -242,6 +242,23 @@ Operator	Name        Description                                                
     
     String txt9 = "Hello\tWorld!";
     System.out.println(txt9);
+    
+    //Java Math
+    System.out.println(Math.max(5, 10));
+    System.out.println(Math.min(5, 10));
+    System.out.println(Math.sqrt(10));
+    
+    //The Math.abs(x) method returns the absolute (positive) value of x:
+    System.out.println(Math.abs(-4.7));  
+    System.out.println(Math.random()); 
+    
+    /*
+    To get more control over the random number, for example, if you only want a random number
+    between 0 and 100, you can use the following formula:
+    */
+    
+     int randomNum = (int)(Math.random() * 101);  // 0 to 100
+    System.out.println(randomNum);
 
     }
 
