@@ -224,41 +224,62 @@ Operator	Name        Description                                                
         int w3 = 20;
         String z3 = q3 + w3;
         System.out.println(z3);
-        
+
         String txt4 = "We are the so-called \"Vikings\" from the north.";
         System.out.println(txt4);
-        
+
         String txt5 = "It\'s alright.";
-    System.out.println(txt5);
-    
-      String txt6 = "The character \\ is called backslash.";
-    System.out.println(txt6);
-    
-    String txt7 = "Hello\nWorld!";
-    System.out.println(txt7);
-    
-      String txt8 = "Hello\rWor\rld!";
-    System.out.println(txt8);
-    
-    String txt9 = "Hello\tWorld!";
-    System.out.println(txt9);
-    
-    //Java Math
-    System.out.println(Math.max(5, 10));
-    System.out.println(Math.min(5, 10));
-    System.out.println(Math.sqrt(10));
-    
-    //The Math.abs(x) method returns the absolute (positive) value of x:
-    System.out.println(Math.abs(-4.7));  
-    System.out.println(Math.random()); 
-    
-    /*
+        System.out.println(txt5);
+
+        String txt6 = "The character \\ is called backslash.";
+        System.out.println(txt6);
+
+        String txt7 = "Hello\nWorld!";
+        System.out.println(txt7);
+
+        String txt8 = "Hello\rWor\rld!";
+        System.out.println(txt8);
+
+        String txt9 = "Hello\tWorld!";
+        System.out.println(txt9);
+
+        //Java Math
+        System.out.println(Math.max(5, 10));
+        System.out.println(Math.min(5, 10));
+        System.out.println(Math.sqrt(10));
+
+        //The Math.abs(x) method returns the absolute (positive) value of x:
+        System.out.println(Math.abs(-4.7));
+        System.out.println(Math.random());
+
+        /*
     To get more control over the random number, for example, if you only want a random number
     between 0 and 100, you can use the following formula:
-    */
-    
-     int randomNum = (int)(Math.random() * 101);  // 0 to 100
-    System.out.println(randomNum);
+         */
+        int randomNum = (int) (Math.random() * 101);  // 0 to 100
+        System.out.println(randomNum);
+
+        boolean isJavaFun = true;
+        boolean isFishTasty = false;
+        System.out.println(isJavaFun);
+        System.out.println(isFishTasty);
+
+        int s = 10;
+        int t = 9;
+        System.out.println(s > t); // returns true, because 10 is higher than 9  z
+
+        int s1 = 10;
+        System.out.println(s1 == 10); // returns true, because the value of x is equal to 10
+
+        int myAge = 25;
+        int votingAge = 18;
+        System.out.println(myAge >= votingAge); // returns true (25 year olds are allowed to vote!) 
+
+        if (myAge >= votingAge) {
+            System.out.println("Old enough to vote!");
+        } else {
+            System.out.println("Not old enough to vote.");
+        }
 
     }
 
