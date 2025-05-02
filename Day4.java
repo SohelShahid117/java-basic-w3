@@ -12,6 +12,15 @@ Strings are used for storing text.
 
 A String variable contains a collection of characters surrounded by double quotes
 
+3.Java Conditions and If Statements:
+java has the following conditional statements:
+
+Use-if to specify a block of code to be executed, if a specified condition is true
+Use-else to specify a block of code to be executed, if the same condition is false
+Use-else if to specify a new condition to test, if the first condition is false
+Use-switch to specify many alternative blocks of code to be executed
+
+
  */
 
 public class Day4 {
@@ -279,6 +288,64 @@ Operator	Name        Description                                                
             System.out.println("Old enough to vote!");
         } else {
             System.out.println("Not old enough to vote.");
+        }
+
+        if (20 > 18) {
+            System.out.println("20 is greater than 18"); // obviously
+        }
+
+        int g = 20;
+        int h = 18;
+        if (g > h) {
+            System.out.println("g is greater than h");
+        }
+        int time = 20;
+        if (time < 18) {
+            System.out.println("Good day.");
+        } else {
+            System.out.println("Good evening.");
+        }
+
+        if (time < 10) {
+            System.out.println("Good morning.");
+        } else if (time < 18) {
+            System.out.println("Good day.");
+        } else {
+            System.out.println("Good evening.");
+        }
+
+        //Java Short Hand If...Else (Ternary Operator)
+        //variable = (condition) ? expressionTrue :  expressionFalse;
+        int time2 = 20;
+        String result;
+        result = (time2 < 18) ? "Good day." : "Good evening.";
+        System.out.println(result);
+
+//        int doorCode = 1337;
+        int doorCode = 1237;
+
+        if (doorCode == 1337) {
+            System.out.println("Correct code. The door is now open.");
+        } else {
+            System.out.println("Wrong code. The door remains closed.");
+        }
+
+        int myNum = 10; // Is this a positive or negative number?
+
+        if (myNum > 0) {
+            System.out.println("The value is a positive number.");
+        } else if (myNum < 0) {
+            System.out.println("The value is a negative number.");
+        } else {
+            System.out.println("The value is 0.");
+        }
+
+//        int myNum = 5;
+
+        if (myNum % 2 == 0) {
+            System.out.println(myNum + " is even");
+        } else {
+            System.out.println(myNum + " is odd");
         }
 
     }
