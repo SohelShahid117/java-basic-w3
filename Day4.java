@@ -1,11 +1,17 @@
 /*
-Java divides the operators into the following groups:
+1.Java divides the operators into the following groups:
 
 Arithmetic operators
 Assignment operators
 Comparison operators
 Logical operators
 Bitwise operators
+
+2.Java Strings
+Strings are used for storing text.
+
+A String variable contains a collection of characters surrounded by double quotes
+
  */
 
 public class Day4 {
@@ -115,7 +121,7 @@ Result is 1.
         a3 >>= 3;
         System.out.println(a3);
         /*
-    here using the right shift assignment operator >>=, which shifts the bits of x to the right by 3 positions.
+here using the right shift assignment operator >>=, which shifts the bits of x to the right by 3 positions.
 
 Step-by-step breakdown:
 The initial value of x is 5.
@@ -136,9 +142,9 @@ Result: 0000 0000 0000 0000 0000 0000 0000 0000 (after right shift)
         /*
     x = 5 → binary: 0000 0101
 
-x <<= 3 means shift the bits of x left by 3 positions:
+    x <<= 3 means shift the bits of x left by 3 positions:
 
-0000 0101 becomes 0010 1000 → which is 40 in decimal.
+    0000 0101 becomes 0010 1000 → which is 40 in decimal.
     40 in binary = 101000
          */
         //Java Comparison Operators
@@ -154,8 +160,8 @@ x <<= 3 means shift the bits of x left by 3 positions:
         //Java Logical Operators
         /*
         Java Logical Operators
-You can also test for true or false values with logical operators.
-Logical operators are used to determine the logic between variables or values:
+        You can also test for true or false values with logical operators.
+        Logical operators are used to determine the logic between variables or values:
 
 Operator	Name        Description                                                     Example	
     &&      Logical and         Returns true if both statements are true                x < 5 &&  x < 10	
@@ -163,14 +169,80 @@ Operator	Name        Description                                                
     !       Logical not         Reverse the result, returns false if the result is true	!(x < 5 && x < 10)	
 
          */
-    
         int d = 5;
-    System.out.println(d > 3 && d < 10); // returns true because 5 is greater than 3 AND 5 is less than 10
-    System.out.println(d > 6 || d < 10);
+        System.out.println(d > 3 && d < 10); // returns true because 5 is greater than 3 AND 5 is less than 10
+        System.out.println(d > 6 || d < 10);
+
+        System.out.println(!(d > 3 && d < 10));
+
+        String greeting = "Hello";
+        System.out.println(greeting);
+
+        /*
+    A String in Java is actually an object, which contain methods that can perform certain operations on strings. For example,
+    the length of a string can be found with the length() method:
+         */
+        String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        System.out.println("The length of the txt string is: " + txt.length());
+
+        String txt2 = "Hello World";
+        System.out.println(txt2.toUpperCase());
+        System.out.println(txt2.toLowerCase());
+
+        /*
+    Finding a Character in a String
+    The indexOf() method returns the index (the position) of the first occurrence of a specified text in a string (including whitespace)
+    Java counts positions from zero.
+    0 is the first position in a string, 1 is the second, 2 is the third ...
+         */
+        String txt3 = "Please locate where 'locate' occurs!";
+        System.out.println(txt3.indexOf("locate"));
+
+        String firstName = "John";
+        String lastName = "Doe";
+        System.out.println(firstName + " " + lastName);
+        System.out.println(firstName.concat(lastName));
+
+        /*
+    Adding Numbers and Strings
+    WARNING!
+
+    Java uses the + operator for both addition and concatenation.
+    Numbers are added. Strings are concatenated.
+         */
+        int q = 10;
+        int y = 20;
+        int z = q + y;
+        System.out.println(z);
+
+        String q2 = "10";
+        String w2 = "20";
+        String z2 = q2 + w2;
+        System.out.println(z2);
+
+        String q3 = "10";
+        int w3 = 20;
+        String z3 = q3 + w3;
+        System.out.println(z3);
+        
+        String txt4 = "We are the so-called \"Vikings\" from the north.";
+        System.out.println(txt4);
+        
+        String txt5 = "It\'s alright.";
+    System.out.println(txt5);
     
-    System.out.println(!(d > 3 && d < 10));
+      String txt6 = "The character \\ is called backslash.";
+    System.out.println(txt6);
     
+    String txt7 = "Hello\nWorld!";
+    System.out.println(txt7);
     
+      String txt8 = "Hello\rWor\rld!";
+    System.out.println(txt8);
+    
+    String txt9 = "Hello\tWorld!";
+    System.out.println(txt9);
+
     }
 
 }
