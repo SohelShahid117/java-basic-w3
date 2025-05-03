@@ -29,6 +29,9 @@ just separate them with a comma.
 In the previous page, we used the void keyword in all examples, which indicates that the method should not return a value.
 If you want the method to return a value, you can use a primitive data type (such as int, char, etc.) instead of void, 
 and use the return keyword inside the method:
+
+6.A block of code may exist on its own or it can belong to an if, while or for statement. In the case of for statements, 
+variables declared in the statement itself are also available inside the block's scope.
  */
 public class Day5b {
 
@@ -115,6 +118,42 @@ With method overloading, multiple methods can have the same name with different 
         double myNum4 = plusMethod(4.3, 6.26);
         System.out.println("int: " + myNum3);
         System.out.println("double: " + myNum4);
+
+        /*
+        Method Scope
+        Variables declared directly inside a method are available anywhere in the method following 
+        the line of code in which they were declared:
+         */
+        // Code here cannot use x
+        int x = 100;
+
+        // Code here can use x
+        System.out.println(x);
+        
+        /*
+        Block Scope
+        A block of code refers to all of the code between curly braces {}.
+        Variables declared inside blocks of code are only accessible by the code between 
+        the curly braces, which follows the line in which the variable was declared:
+        */
+        
+         // Code here CANNOT use x
+         System.out.println(x);
+
+    { // This is a block
+
+      // Code here CANNOT use y
+
+      int y = 200;
+
+      // Code here CAN use x
+      System.out.println(y);
+      System.out.println(x);
+
+    } // The block ends here
+    //System.out.println(y); give err
+
+
     }
 
 }
