@@ -61,7 +61,31 @@ public class Day5b {
         return 5 + x;
     }
 
-    static int myMethod5(int x,int y) {
+    static int myMethod5(int x, int y) {
+        return x + y;
+    }
+
+    /*
+    Method Overloading
+With method overloading, multiple methods can have the same name with different parameters:
+    int myMethod(int x)
+    float myMethod(float x)
+    double myMethod(double x, double y)
+    Note: Multiple methods can have the same name as long as the number and/or type of parameters are different
+     */
+    static int plusMethodInt(int x, int y) {
+        return x + y;
+    }
+
+    static double plusMethodDouble(double x, double y) {
+        return x + y;
+    }
+
+    static int plusMethod(int x, int y) {
+        return x + y;
+    }
+
+    static double plusMethod(double x, double y) {
         return x + y;
     }
 
@@ -81,6 +105,16 @@ public class Day5b {
         System.out.println(myMethod4(8));
         int z = myMethod5(7, 8);
         System.out.println(z);
+
+        int myNum1 = plusMethodInt(8, 5);
+        double myNum2 = plusMethodDouble(4.3, 6.26);
+        System.out.println("int: " + myNum1);
+        System.out.println("double: " + myNum2);
+
+        int myNum3 = plusMethod(8, 5);
+        double myNum4 = plusMethod(4.3, 6.26);
+        System.out.println("int: " + myNum3);
+        System.out.println("double: " + myNum4);
     }
 
 }
