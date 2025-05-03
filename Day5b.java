@@ -32,6 +32,22 @@ and use the return keyword inside the method:
 
 6.A block of code may exist on its own or it can belong to an if, while or for statement. In the case of for statements, 
 variables declared in the statement itself are also available inside the block's scope.
+
+7.Java Recursion
+Recursion is the technique of making a function call itself. This technique provides a way to break
+complicated problems down into simple problems which are easier to solve.
+
+8.Halting Condition
+Just as loops can run into the problem of infinite looping, recursive functions can run into the problem of infinite recursion.
+Infinite recursion is when the function never stops calling itself. Every recursive function should have a halting condition,
+which is the condition where the function stops calling itself. In the previous example, the halting condition is when the
+parameter k becomes 0.
+The halting condition for this recursive function is when end is not greater than start:
+
+9.The developer should be very careful with recursion as it can be quite easy to slip into writing a function which 
+never terminates, or one that uses excess amounts of memory or processor power. However, when written correctly recursion 
+can be a very efficient and mathematically-elegant approach to programming.
+
  */
 public class Day5b {
 
@@ -92,6 +108,22 @@ With method overloading, multiple methods can have the same name with different 
         return x + y;
     }
 
+    public static int sum(int k) {
+        if (k > 0) {
+            return k + sum(k - 1);
+        } else {
+            return 0;
+        }
+    }
+
+    public static int sum(int start, int end) {
+        if (end > start) {
+            return end + sum(start, end - 1);
+        } else {
+            return end;
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println("hi");
         myMethod();
@@ -129,30 +161,34 @@ With method overloading, multiple methods can have the same name with different 
 
         // Code here can use x
         System.out.println(x);
-        
+
         /*
         Block Scope
         A block of code refers to all of the code between curly braces {}.
         Variables declared inside blocks of code are only accessible by the code between 
         the curly braces, which follows the line in which the variable was declared:
-        */
-        
-         // Code here CANNOT use x
-         System.out.println(x);
+         */
+        // Code here CANNOT use x
+        System.out.println(x);
 
-    { // This is a block
+        { // This is a block
 
-      // Code here CANNOT use y
+            // Code here CANNOT use y
+            int y = 200;
 
-      int y = 200;
+            // Code here CAN use x
+            System.out.println(y);
+            System.out.println(x);
 
-      // Code here CAN use x
-      System.out.println(y);
-      System.out.println(x);
+        } // The block ends here
+        //System.out.println(y); give err
 
-    } // The block ends here
-    //System.out.println(y); give err
+        int result = sum(10);
+        System.out.println(result);
 
+        //Use recursion to add all of the numbers between 5 to 10.
+        int result2 = sum(5, 10);
+        System.out.println(result2);
 
     }
 
