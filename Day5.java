@@ -47,6 +47,63 @@ public class Day5 {
             dice++;
         }
 
+        /*
+Java For Loop
+When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop
+         */
+        for (int k = 0; k < 5; k++) {
+            System.out.println(k);
+        }
+
+        for (int i1 = 0; i1 <= 10; i1 = i1 + 2) {
+            System.out.println(i1);
+        }
+
+        /*
+         Nested Loops
+It is also possible to place a loop inside another loop. This is called a nested loop.
+         */
+        // Outer loop.
+        for (int a = 1; a <= 2; a++) {
+            System.out.println("Outer: " + a); // Executes 2 times
+
+            // Inner loop
+            for (int b = 1; b <= 3; b++) {
+                System.out.println(" Inner: " + b); // Executes 6 times (2 * 3)
+            }
+        }
+
+        /*
+        For-Each Loop
+There is also a "for-each" loop, which is used exclusively to loop through elements in an array (or other data sets):
+        for (type variableName : arrayName) {
+  // code block to be executed
+}
+         */
+        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+        for (String a : cars) {
+            System.out.println(a);
+        }
+
+        String[] fruits = {"apple", "banana", "mango"};
+        for (String f : fruits) {
+            System.out.println(f);
+        }
+
+        for (int a = 0; a <= 100; a += 10) {
+            System.out.println(a);
+        }
+        
+            for (int a = 0; a <= 10; a = a + 2) {
+      System.out.println(a);
+    }
+            
+               int number = 2;
+
+    // Print the multiplication table for the number 2
+    for (int k = 1; k <= 10; k++) {
+      System.out.println(number + " x " + k + " = " + (number * k));
     }
 
+    }
 }
